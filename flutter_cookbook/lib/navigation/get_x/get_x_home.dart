@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:flutter_cookbook/routes.dart';
 
-class FlutterNativeHomePage extends StatelessWidget {
-  const FlutterNativeHomePage({Key? key}) : super(key: key);
+class GetXHomePage extends StatelessWidget {
+  const GetXHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FLutter Native Navigation'),
+        title: const Text('GetX Navigation'),
       ),
       body: ListView(
         padding: const EdgeInsets.all(15),
@@ -18,11 +19,11 @@ class FlutterNativeHomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15),
             child: ElevatedButton(
               child: const Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Text('Open first route'),
+                padding: EdgeInsets.symmetric(vertical: 15),
+                child: Text('Open (GetX) first route'),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, NavigationFlutterNativeFirstRoute);
+                Get.toNamed(navigationGetXFirstRoute);
               },
             ),
           ),
@@ -31,11 +32,10 @@ class FlutterNativeHomePage extends StatelessWidget {
             child: ElevatedButton(
               child: const Padding(
                 padding: EdgeInsets.symmetric(vertical: 15),
-                child: Text('Open second route'),
+                child: Text('Open (GetX) second route'),
               ),
               onPressed: () {
-                Navigator.pushNamed(
-                    context, NavigationFlutterNativeSecondRoute);
+                Get.toNamed(navigationGetXSecondRoute);
               },
             ),
           ),
@@ -45,42 +45,42 @@ class FlutterNativeHomePage extends StatelessWidget {
   }
 }
 
-class FlutterNativeFirstRoute extends StatelessWidget {
-  const FlutterNativeFirstRoute({Key? key}) : super(key: key);
+class GetXFirstRoute extends StatelessWidget {
+  const GetXFirstRoute({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('First Route'),
+        title: const Text('(GetX) First Route'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
           },
-          child: const Text('Go back...'),
+          child: const Text('Go back :)'),
         ),
       ),
     );
   }
 }
 
-class FlutterNativeSecondRoute extends StatelessWidget {
-  const FlutterNativeSecondRoute({Key? key}) : super(key: key);
+class GetXSecondRoute extends StatelessWidget {
+  const GetXSecondRoute({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second Route"),
+        title: const Text('(GetX) Second Route'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
           },
-          child: const Text('Go back!'),
+          child: const Text('Go back :)'),
         ),
       ),
     );

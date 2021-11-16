@@ -18,7 +18,7 @@ class NavigationHomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, NavigationFlutterNativeHome);
+                Navigator.pushNamed(context, navigationFlutterNativeHome);
               },
               child: const Padding(
                 padding: EdgeInsets.all(15),
@@ -30,7 +30,7 @@ class NavigationHomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, NavigationGetXHome);
+                Navigator.pushNamed(context, navigationGetXHome);
               },
               child: const Padding(
                 padding: EdgeInsets.all(15),
