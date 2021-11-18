@@ -14,3 +14,6 @@ const stateManagementProvider = '$stateManagement/provider';
 const simpleInheritedWidgetExample = '/simple_inh_example';
 const scrollView = '/scroll_view';
 const customScrollView01 = '$scrollView/custom_scroll_view_01';
+const canvasAndPainter = '/canvas_and_painter';
+const canvasHome = '$canvasAndPainter/canvas';
+const painterHome = '$canvasAndPainter/painter';

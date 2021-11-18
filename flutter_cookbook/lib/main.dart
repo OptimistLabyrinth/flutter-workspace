@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'package:flutter_cookbook/canvas_paint/canvas_and_painter_home.dart';
 import 'package:flutter_cookbook/navigation/flutter_native/flutter_native_home.dart';
 import 'package:flutter_cookbook/navigation/get_x/get_x_home.dart';
 import 'package:flutter_cookbook/navigation/navigation_home.dart';
@@ -63,6 +64,9 @@ class MyApp extends StatelessWidget {
               const SimpleInheritedWidgetHome(),
           scrollView: (context) => const ScrollViewHome(),
           customScrollView01: (context) => const CustomScrollView01(),
+          canvasAndPainter: (context) => const CanvasAndPainterHome(),
+          canvasHome: (context) => Container(),
+          painterHome: (context) => Container(),
         },
       ),
     );
@@ -119,6 +123,20 @@ class HomePage extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(15),
                   child: Text('Scroll View'),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 15),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, canvasAndPainter);
+              },
+              child: const Center(
+                child: Padding(
+                  padding: EdgeInsets.all(15),
+                  child: Text('Canvas and Painter'),
                 ),
               ),
             ),
