@@ -12,3 +12,5 @@ const stateManagementGetX = '$stateManagement/get_x';
 const stateManagementInheritedWidget = '$stateManagement/inherited_widget';
 const stateManagementProvider = '$stateManagement/provider';
 const simpleInheritedWidgetExample = '/simple_inh_example';
+const scrollView = '/scroll_view';
+const customScrollView01 = '$scrollView/custom_scroll_view_01';

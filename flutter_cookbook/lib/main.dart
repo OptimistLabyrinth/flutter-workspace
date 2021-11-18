@@ -6,6 +6,8 @@ import 'package:flutter_cookbook/navigation/flutter_native/flutter_native_home.d
 import 'package:flutter_cookbook/navigation/get_x/get_x_home.dart';
 import 'package:flutter_cookbook/navigation/navigation_home.dart';
 import 'package:flutter_cookbook/routes.dart';
+import 'package:flutter_cookbook/scroll_view/custom_scroll_view_01/custom_scroll_view_01.dart';
+import 'package:flutter_cookbook/scroll_view/scroll_view_home.dart';
 import 'package:flutter_cookbook/state_management/inherited_widget/inherited_widget_home.dart';
 import 'package:flutter_cookbook/state_management/inherited_widget/state_root.dart';
 import 'package:flutter_cookbook/state_management/inh_sample/simple_inherited_widget.dart';
@@ -59,6 +61,8 @@ class MyApp extends StatelessWidget {
           stateManagementProvider: (context) => Container(),
           simpleInheritedWidgetExample: (context) =>
               const SimpleInheritedWidgetHome(),
+          scrollView: (context) => const ScrollViewHome(),
+          customScrollView01: (context) => const CustomScrollView01(),
         },
       ),
     );
@@ -101,6 +105,20 @@ class HomePage extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(15),
                   child: Text('State Management'),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 15),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, scrollView);
+              },
+              child: const Center(
+                child: Padding(
+                  padding: EdgeInsets.all(15),
+                  child: Text('Scroll View'),
                 ),
               ),
             ),
