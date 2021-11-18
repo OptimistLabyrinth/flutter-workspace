@@ -92,4 +92,4 @@ flutter:
   fonts:
     - family: IndieFlower
       fonts:
-        - asset: fonts\Indie_Flower\IndieFlower-Regular.ttf
+        - asset: fonts/Indie_Flower/IndieFlower-Regular.ttf
