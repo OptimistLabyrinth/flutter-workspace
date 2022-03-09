@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-import './test_widget_01.dart';
-import './test_widget_02.dart';
-import './test_widget_03.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_application_03/providers/counter.dart';
+import 'package:flutter_application_03/test_widget_04.dart';
 
 void main() {
-  runApp(const MaterialApp(home: Home()));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => Counter(),
+        ),
+      ],
+      child: const Home(),
+    ),
+  );
 }
 
 final globalForegroundColor = Colors.white;
@@ -15,6 +24,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TestWidget03(key: key);
+    return TestWidget04(key: key);
   }
 }
